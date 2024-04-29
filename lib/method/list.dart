@@ -5,5 +5,6 @@ Widget list(Detailuserdata detailuser) {
   return ListTile(
     title: Text(detailuser.name),
     subtitle: Text(detailuser.email),
+    trailing: Text(detailuser.phone),
   );
 }
