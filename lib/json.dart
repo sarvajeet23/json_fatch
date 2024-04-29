@@ -10,11 +10,8 @@ class Json extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<Detailuserdata> detailuser = <Detailuserdata>[];
-    for (var json in detailUserData) {
-      var model = Detailuserdata.fromjson(json);
-      detailuser.add(model);
-    }
+    List<Detailuserdata> detailuser =
+        detailUserData.map((json) => Detailuserdata.fromjson(json)).toList();
 
     return Scaffold(
       appBar: AppBar(
